@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    border: 0;
+    &:focus {
+        outline: none;
+    }
+}
+
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    background: #F2F2F2;
+    display: grid;
+    place-items: center;
+}
+
+.settings-popup {
+    width: 750px;
+    background-color: #fff;
+    padding: 80px 90px;
+    max-height: 100vh;
+    overflow-y: auto;
+    box-shadow: 0px 67px 55px -34px rgba(85, 26, 83, 0.469854);
+    border-radius: 15px;
+    position: relative;
+    .close {
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        cursor: pointer;
+    }
+    h3 {
+        font-weight: 900;
+        font-size: 26px;
+        margin-bottom: 55px;
+    }
+    ul {
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            .item {
+                h4 {
+                    font-weight: 900;
+                    font-size: 20px;
+                    margin-bottom: 13px;
+                    color: #874285;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: #242E4C;
+                }
+                .selected {
+                    margin-top: 36px;
+                    width: 330px;
+                    height: 50px;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 20px;
+                        right: 20px;
+                        border: 10px solid transparent;
+                        border-radius: 5px;
+                        border-color: #9298AD transparent transparent transparent;
+                    }
+                    select {
+                        cursor: pointer;
+                        width: 330px;
+                        height: 50px;
+                        font-weight: normal;
+                        font-size: 20px;
+                        line-height: 25px;
+                        color: #242E4C;
+                        appearance: none;
+                        border: 2px solid #D8DBE6;
+                        box-sizing: border-box;
+                        border-radius: 5px;
+                        padding-left: 15px;
+                    }
+                }
+            }
+            .checkbox-input {
+                width: 66px;
+                height: 37px;
+                border: 2px solid #D8DBE6;
+                box-sizing: border-box;
+                border-radius: 18.5px;
+                position: relative;
+                cursor: pointer;
+                .checkbox {
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50px;
+                    margin: 4px;
+                    top: 0;
+                    right: 0;
+                    background: #874285;
+                    transition: .2s right;
+                }
+                input {
+                    display: none;
+                    &:checked~.checkbox {
+                        top: 0;
+                        right: 30px;
+                        background: #9298AD;
+                    }
+                }
+            }
+        }
+    }
+    hr {
+        height: 1px;
+        border: 1px solid #D8DBE6;
+        margin: 45px 0;
+    }
+    .actions {
+        a {
+            margin-top: 15px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 160px;
+            height: 50px;
+            border-radius: 6px;
+            font-size: 18px;
+            line-height: 23px;
+            color: #5c606b;
+            border: 2px solid #D8DBE6;
+            transition: .2s;
+            margin-right: 20px;
+            &:hover {
+                border: 2px solid #F34B8C;
+                background: #F34B8C;
+                color: #FFFFFF;
+            }
+        }
+    }
+}
